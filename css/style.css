@@ -1,0 +1,90 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+p,
+h4 {
+  margin: 0;
+}
+
+input {
+  margin-right: 10px;
+}
+
+/* Navbar */
+nav {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.right-align {
+  margin-left: auto;
+}
+
+.nav-item {
+  padding: 0 8px;
+}
+
+.nav-item:last-of-type {
+  margin-right: 10px;
+}
+
+/* Card Votação/Relátorio */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Muli";
+  height: 100vh;
+  margin: 0;
+}
+
+.card-header {
+  margin-bottom: 8px;
+}
+
+.candidato {
+  margin: 10px 5px;
+}
+
+.candidato-name {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.voting-card {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+.items-container {
+  margin: 0 10px;
+}
+
+.submit-button {
+  margin-bottom: 5px;
+}
+
+#feedback-msg {
+  margin: 10px 0;
+}
+
+.success-feedback {
+  color: #00c800;
+}
+
+.error-feedback {
+  color: #ff0000;
+}
