@@ -8,7 +8,7 @@ O "Voting App" é uma aplicação web que permite aos usuários participar de vo
 * Luiz Felipe de Sousa Sá - 01532557
 * Pedro Braz de Oliveira Viana - 01535206
 * Pedro São Paulo da Silva Santos - 01503728
-* 
+* Thiago Pininga Tavares - 01525716
 * Victor Silva Dutra de Amorim - 01515499
 
 ## Processos de execução
