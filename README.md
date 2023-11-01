@@ -35,4 +35,15 @@ Seguir os procedimentos abaixo:
    );
    ```
 
-4. Lembre de substituir o usuário do MySQL em voting-app/backend/server.js
+4. Na pasta do backend, crie um novo arquivo chamado database.js:
+
+   ```js
+   const config = {
+     host: "localhost", // Substitua pelo endereço do seu banco de dados, se necessário.
+     user: "username", // Substitua pelo nome de usuário do banco de dados.
+     password: "password", // Substitua pela senha do banco de dados.
+     database: "voting_app_db",
+   }
+   
+   module.exports = config;
+   ```
