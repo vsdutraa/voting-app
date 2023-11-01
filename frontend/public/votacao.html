@@ -27,25 +27,36 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand navbar-dark bg-custom">
-      <a class="navbar-brand" href="#">Voting App</a>
+      <a class="navbar-brand" href="/">
+        <i class="logo fa-solid fa-check-to-slot"></i> Voting App
+      </a>
       <ul class="navbar-nav right-align">
         <li class="nav-item">
-          <a class="nav-link" href="./votacao.html">Votação</a>
+          <a class="nav-link" href="./votacao">
+            <i class="fa-solid fa-check-to-slot"></i> Votação
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./contagem.html">Relatório</a>
+          <a class="nav-link" href="./contagem">
+            <i class="fas fa-chart-bar"></i> Relatório
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">
+            <i class="fas fa-sign-out-alt"></i>
+          </a>
         </li>
       </ul>
     </nav>
 
     <main>
       <div class="voting-card">
-        <div class="card-header">
-          <h4>Escolha seu candidato:</h4>
-        </div>
-        <div class="items-container">
-          <form method="POST" action="/api/votos">
-            <div class="candidato">
+        <h4>Escolha seu candidato:</h4>
+
+        <form method="POST" action="/api/votos">
+          <!-- <div class="candidato"> -->
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
               <input
                 type="radio"
                 name="candidato"
@@ -53,8 +64,8 @@
                 value="Candidato 1"
               />
               <label class="candidato-name" for="candidato1">Candidato 1</label>
-            </div>
-            <div class="candidato">
+            </li>
+            <li class="list-group-item">
               <input
                 type="radio"
                 name="candidato"
@@ -62,15 +73,21 @@
                 value="Candidato 2"
               />
               <label class="candidato-name" for="candidato2">Candidato 2</label>
-            </div>
-            <p id="feedback-msg"></p>
-            <button type="submit" class="vote-button btn">Votar</button>
-          </form>
-        </div>
+            </li>
+          </ul>
+          <p id="feedback-msg"></p>
+          <button type="submit" class="vote-button btn">Votar</button>
+        </form>
       </div>
     </main>
 
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/3813554734.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Script -->
-    <script src="/js/index.js"></script>
+    <script src="/js/votacao.js"></script>
   </body>
 </html>

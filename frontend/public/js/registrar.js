@@ -22,7 +22,7 @@ form.addEventListener("submit", function (event) {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  fetch("/login", {
+  fetch("/registro", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -30,9 +30,14 @@ form.addEventListener("submit", function (event) {
     body: JSON.stringify({ username, password }),
   }).then((response) => {
     if (response.status === 200) {
-      window.location.href = "/votacao";
-    } else if (response.status === 401) {
-      feedbackMsg.textContent = "Usuário não encontrado ou senha incorreta.";
+      feedbackMsg.textContent = "Registro bem-sucedido.";
+      feedbackMsg.classList.add("success-feedback");
+      feedbackMsg.classList.remove("error-feedback");
+      setTimeout(() => {
+        window.location.href = "/votacao";
+      }, 1500);
+    } else if (response.status === 400) {
+      feedbackMsg.textContent = "Usuário já registrado.";
       feedbackMsg.classList.remove("success-feedback");
       feedbackMsg.classList.add("error-feedback");
     }

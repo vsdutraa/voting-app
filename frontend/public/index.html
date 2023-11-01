@@ -22,54 +22,69 @@
     />
 
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand navbar-dark bg-custom">
-      <a class="navbar-brand" href="#">Voting App</a>
-      <ul class="navbar-nav right-align">
-        <li class="nav-item">
-          <a class="nav-link" href="./votacao.html">Votação</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./contagem.html">Relatório</a>
-        </li>
-      </ul>
+      <a class="navbar-brand" href="/">
+        <i class="logo fa-solid fa-check-to-slot"></i> Voting App
+      </a>
+      <ul class="navbar-nav right-align"></ul>
     </nav>
 
     <main>
       <div class="login-card">
         <h2>Login</h2>
-        <form>
+        <form action="/login" method="POST">
           <div class="form-group">
-            <input
-              class="form-control login-input"
-              type="text"
-              id="username"
-              name="username"
-              required
-              placeholder="Digite o nome de usuário"
-            />
+            <div class="input-container">
+              <i class="fas fa-user"></i>
+              <input
+                class="form-control login-input"
+                type="text"
+                id="username"
+                name="username"
+                required
+                placeholder="Digite o nome de usuário"
+              />
+            </div>
           </div>
           <div class="form-group">
-            <input
-              class="form-control login-input"
-              type="password"
-              id="password"
-              name="password"
-              required
-              placeholder="Digite sua senha"
-            />
+            <div class="input-container">
+              <i
+                class="fas fa-eye"
+                id="togglePassword"
+                onclick="togglePasswordVisibility()"
+              ></i>
+              <input
+                class="form-control login-input"
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Digite sua senha"
+              />
+            </div>
           </div>
+          <p id="feedback-msg"></p>
           <button type="submit" class="login-button btn">Entrar</button>
         </form>
         <p>
           Não tem uma conta?
-          <a class="login-link" href="./signup.html">Registre-se</a>
+          <a class="login-link" href="./registrar">Registre-se</a>
         </p>
       </div>
     </main>
+
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/3813554734.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script -->
+    <script src="/js/index.js"></script>
   </body>
 </html>

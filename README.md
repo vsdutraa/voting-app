@@ -15,6 +15,11 @@ O "Voting App" é uma aplicação web que permite aos usuários participar de vo
 
 Seguir os procedimentos abaixo:
 
+### Configuração do Ambiente
+
+1. Certifique-se de executar:
+   ```npm install``` 
+
 ### Configuração do Banco de Dados
 
 1. Certifique-se de ter o MySQL instalado em sua máquina.
@@ -26,16 +31,26 @@ Seguir os procedimentos abaixo:
    USE voting_app_db;
    ```
 
-3. Execute o seguinte comando SQL para criar a tabela necessária:
+3. Execute os seguintes comandos SQL para criar as tabelas necessárias:
 
    ```sql
    CREATE TABLE votos (
-   id INT AUTO_INCREMENT PRIMARY KEY,
-   candidato VARCHAR(255) NOT NULL
+   id INT PRIMARY KEY AUTO_INCREMENT,
+   user_id INT,
+   candidato VARCHAR(255) NOT NULL,
+   FOREIGN KEY (user_id) REFERENCES usuarios(id)
+   );
+   ```
+   
+   ```sql
+   CREATE TABLE usuarios (
+   id INT PRIMARY KEY AUTO_INCREMENT,
+   username VARCHAR(255) NOT NULL,
+   password VARCHAR(255) NOT NULL
    );
    ```
 
-4. Na pasta do backend, crie um novo arquivo chamado database.js:
+4. Na pasta do backend, crie um novo arquivo chamado dbconfig.js:
 
    ```js
    const config = {

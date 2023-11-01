@@ -27,35 +27,50 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand navbar-dark bg-custom">
-      <a class="navbar-brand" href="#">Voting App</a>
+      <a class="navbar-brand" href="/">
+        <i class="logo fa-solid fa-check-to-slot"></i> Voting App
+      </a>
       <ul class="navbar-nav right-align">
         <li class="nav-item">
-          <a class="nav-link" href="./votacao.html">Votação</a>
+          <a class="nav-link" href="./votacao">
+            <i class="fa-solid fa-check-to-slot"></i> Votação
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./contagem.html">Relatório</a>
+          <a class="nav-link" href="./contagem">
+            <i class="fas fa-chart-bar"></i> Relatório
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">
+            <i class="fas fa-sign-out-alt"></i>
+          </a>
         </li>
       </ul>
     </nav>
 
     <main>
       <div class="voting-card">
-        <div class="card-header">
-          <h4>Relatório dos votos</h4>
-        </div>
+        <h4>Relatório dos votos</h4>
 
-        <div class="items-container">
-          <div class="candidato">
-            <p class="candidato-name">Candidato 1</p>
-            <p class="candidato-votos" id="votosCandidato1">0 votos</p>
-          </div>
-          <div class="candidato">
-            <p class="candidato-name">Candidato 2</p>
-            <p class="candidato-votos" id="votosCandidato2">0 votos</p>
-          </div>
-        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item candidato-name">
+            Candidato 1:
+            <p style="display: inline" id="votosCandidato1">0 votos</p>
+          </li>
+          <li class="list-group-item candidato-name">
+            Candidato 2:
+            <p style="display: inline" id="votosCandidato2">0 votos</p>
+          </li>
+        </ul>
       </div>
     </main>
+
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/3813554734.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Script -->
     <script src="/js/contagem.js"></script>
