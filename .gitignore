@@ -1,3 +1,6 @@
+# Database config
+database.js
+
 *~
 *.sw[mnpcod]
 .tmp

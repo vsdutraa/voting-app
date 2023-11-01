@@ -6,12 +6,9 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "vsdutraa", // trocar na máquina do professor.
-  password: "", // trocar na máquina do professor.
-  database: "voting_app_db",
-});
+// Importa config de conexão da database.
+const config = require("./database");
+const db = mysql.createConnection(config);
 
 app.use(express.static(path.join(__dirname, "../frontend/public")));
 app.use(bodyParser.json());
