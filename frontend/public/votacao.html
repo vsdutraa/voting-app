@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting App - Contagem</title>
+    <title>Voting App - Votação</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,23 +39,40 @@
     </nav>
 
     <main>
-      <div class="login-card">
-        <h2>Login</h2>
-        <form>
-          <div class="form-group">
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required />
-          </div>
-          <button type="submit" class="login-button">Entrar</button>
-        </form>
+      <div class="voting-card">
+        <div class="card-header">
+          <h4>Escolha seu candidato:</h4>
+        </div>
+        <div class="items-container">
+          <form method="POST" action="/api/votos">
+            <div class="candidato">
+              <input
+                type="radio"
+                name="candidato"
+                id="candidato1"
+                value="Candidato 1"
+              />
+              <label class="candidato-name" for="candidato1">Candidato 1</label>
+            </div>
+            <div class="candidato">
+              <input
+                type="radio"
+                name="candidato"
+                id="candidato2"
+                value="Candidato 2"
+              />
+              <label class="candidato-name" for="candidato2">Candidato 2</label>
+            </div>
+            <p id="feedback-msg"></p>
+            <button type="submit" class="submit-button btn btn-primary">
+              Votar
+            </button>
+          </form>
+        </div>
       </div>
     </main>
 
     <!-- Script -->
-    <script src="/js/contagem.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>

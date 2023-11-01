@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting App - Contagem</title>
+    <title>Voting App - Sign In</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,6 +24,7 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/css/style.css" />
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand navbar-light bg-light">
@@ -39,8 +40,8 @@
     </nav>
 
     <main>
-      <div class="login-card">
-        <h2>Login</h2>
+      <div class="voting-card">
+        <h2>Registre-se</h2>
         <form>
           <div class="form-group">
             <label for="username">Usuário:</label>
@@ -50,12 +51,19 @@
             <label for="password">Senha:</label>
             <input type="password" id="password" name="password" required />
           </div>
-          <button type="submit" class="login-button">Entrar</button>
+          <div class="form-group">
+            <label for="confirm-password">Confirme a senha:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+          <button type="submit" class="signup-button">Registrar</button>
         </form>
+        <p>Já tem uma conta? <a href="./index.html">Entrar</a></p>
       </div>
     </main>
-
-    <!-- Script -->
-    <script src="/js/contagem.js"></script>
   </body>
 </html>

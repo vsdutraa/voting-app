@@ -20,7 +20,8 @@ app.use(bodyParser.json());
 app
   // GET votos. (fetching todos os votos) test: http://localhost:3000/api/votos
   .get("/api/votos", (req, res) => {
-    db.query("SELECT * FROM votos", (err, results) => {
+    const sql = "SELECT * FROM votos";
+    db.query(sql, (err, results) => {
       if (err) {
         console.error(err);
         res.status(500).json({ error: "Erro ao buscar votos" });

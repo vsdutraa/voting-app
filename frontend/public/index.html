@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voting App - Votação</title>
+    <title>Voting App - Sign In</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,13 +24,14 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="/css/style.css" />
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand navbar-light bg-light">
       <a class="navbar-brand" href="#">Voting App</a>
       <ul class="navbar-nav right-align">
         <li class="nav-item">
-          <a class="nav-link" href="./index.html">Votação</a>
+          <a class="nav-link" href="./votacao.html">Votação</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./contagem.html">Relatório</a>
@@ -40,39 +41,20 @@
 
     <main>
       <div class="voting-card">
-        <div class="card-header">
-          <h4>Escolha seu candidato:</h4>
-        </div>
-        <div class="items-container">
-          <form method="POST" action="/api/votos">
-            <div class="candidato">
-              <input
-                type="radio"
-                name="candidato"
-                id="candidato1"
-                value="Candidato 1"
-              />
-              <label class="candidato-name" for="candidato1">Candidato 1</label>
-            </div>
-            <div class="candidato">
-              <input
-                type="radio"
-                name="candidato"
-                id="candidato2"
-                value="Candidato 2"
-              />
-              <label class="candidato-name" for="candidato2">Candidato 2</label>
-            </div>
-            <p id="feedback-msg"></p>
-            <button type="submit" class="submit-button btn btn-primary">
-              Votar
-            </button>
-          </form>
-        </div>
+        <h2>Login</h2>
+        <form>
+          <div class="form-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit" class="login-button">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="./signup.html">Registre-se</a></p>
       </div>
     </main>
-
-    <!-- Script -->
-    <script src="/js/index.js"></script>
   </body>
 </html>
