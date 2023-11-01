@@ -39,19 +39,21 @@
     </nav>
 
     <main>
-      <div class="login-card">
-        <h2>Login</h2>
-        <form>
-          <div class="form-group">
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required />
+      <div class="voting-card">
+        <div class="card-header">
+          <h4>Relatório dos votos</h4>
+        </div>
+
+        <div class="items-container">
+          <div class="candidato">
+            <p class="candidato-name">Candidato 1</p>
+            <p class="candidato-votos" id="votosCandidato1">0 votos</p>
           </div>
-          <div class="form-group">
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required />
+          <div class="candidato">
+            <p class="candidato-name">Candidato 2</p>
+            <p class="candidato-votos" id="votosCandidato2">0 votos</p>
           </div>
-          <button type="submit" class="login-button">Entrar</button>
-        </form>
+        </div>
       </div>
     </main>
 
