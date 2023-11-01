@@ -27,7 +27,7 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand navbar-dark bg-custom">
       <a class="navbar-brand" href="#">Voting App</a>
       <ul class="navbar-nav right-align">
         <li class="nav-item">
@@ -40,20 +40,35 @@
     </nav>
 
     <main>
-      <div class="voting-card">
+      <div class="login-card">
         <h2>Login</h2>
         <form>
           <div class="form-group">
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required />
+            <input
+              class="form-control login-input"
+              type="text"
+              id="username"
+              name="username"
+              required
+              placeholder="Digite o nome de usuário"
+            />
           </div>
           <div class="form-group">
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required />
+            <input
+              class="form-control login-input"
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="Digite sua senha"
+            />
           </div>
-          <button type="submit" class="login-button">Entrar</button>
+          <button type="submit" class="login-button btn">Entrar</button>
         </form>
-        <p>Não tem uma conta? <a href="./signup.html">Registre-se</a></p>
+        <p>
+          Não tem uma conta?
+          <a class="login-link" href="./signup.html">Registre-se</a>
+        </p>
       </div>
     </main>
   </body>

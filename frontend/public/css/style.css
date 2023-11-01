@@ -1,6 +1,18 @@
+:root {
+  --light: #ddfee4;
+  --primary: #28cc9e;
+  --secondary: #196b69;
+  --dark: #132f2b;
+  --darker: #0e221f;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark);
 }
 
 p,
@@ -14,7 +26,11 @@ input {
 
 /* Navbar */
 nav {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 0px var(--darker);
+}
+
+.bg-custom {
+  background-color: var(--dark);
 }
 
 .navbar-brand {
@@ -65,8 +81,29 @@ main {
   overflow: hidden;
   width: 400px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px 10px;
   border-radius: 0.5rem;
+}
+
+.voting-card h4 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.vote-button {
+  margin-bottom: 10px;
+  background-color: var(--dark);
+  padding: 5px 35px;
+  margin: 5px auto;
+  color: #fff;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
+}
+
+.vote-button:hover {
+  background-color: var(--darker);
+  color: #fff;
 }
 
 .items-container {
@@ -87,4 +124,44 @@ main {
 
 .error-feedback {
   color: #ff0000;
+}
+
+.login-card {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.login-card h2 {
+  font-weight: 600;
+}
+
+.login-input {
+  margin: 5px 0;
+}
+
+.login-button {
+  margin-bottom: 10px;
+  background-color: var(--dark);
+  padding: 5px 35px;
+  margin: 5px auto;
+  color: #fff;
+  font-weight: 600;
+}
+
+.login-button:hover {
+  background-color: var(--darker);
+  color: #fff;
+}
+
+.login-link {
+  text-decoration: none;
+  border-bottom: 2px dotted var(--dark);
+  color: #000000;
 }
