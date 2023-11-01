@@ -43,6 +43,7 @@ Seguir os procedimentos abaixo:
      user: "username", // Substitua pelo nome de usuário do banco de dados.
      password: "password", // Substitua pela senha do banco de dados.
      database: "voting_app_db",
-
+   }
+   
    module.exports = config;
    ```
